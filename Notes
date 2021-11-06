@@ -34,7 +34,6 @@ More info wesbos.com/uses
 ###
 
 use script tag before the closing tag of body, 
-
 var cool=true; (variable declaration statement)
 console.log(cool) (function call statement)
 var and let variable can be updated.
@@ -55,6 +54,8 @@ prettier.io	An opinionated code formatter
 ---------
 console.log is for debugging therefore not suitable to ship to the client.
 variable created inside the function scope not available outside unless its return.
+function parameters function hello(first,second), when calling function its argument hello(Shafiq,coder).
+
 
 
 
