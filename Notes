@@ -1,0 +1,60 @@
+Beginner JavaScript Course from wesbos.com
+------------------------------------------
+
+Install NodeJs
+
+sudo apt install nodejs
+node -v
+
+Install NPM
+
+sudo apt install npm
+npm -v
+
+###
+Linux Commands
+
+cd -change directory
+ls - list items in directory
+ls -l list with details
+pwd - print working directory - if you wanna know where you are
+
+commandlinepoweruser.com - command line course
+
+cd .. -go upper level
+node (to enter in REPL	-Read eval print loop)
+node index.js(runs js in terminal)
+
+###
+
+JS editor - VS Code
+
+More info wesbos.com/uses
+
+###
+
+use script tag before the closing tag of body, 
+
+var cool=true; (variable declaration statement)
+console.log(cool) (function call statement)
+var and let variable can be updated.
+const varivables cant be changed.
+'use strict'; with this mode ,you cannot define variable without decalaration. its good practice.
+var variable refer to as function scope variable.
+let and const refer to as block scope variable.
+Variable declaration tip: use const by default , use let if value needs to be changed. 
+As a convention ,varibale name should start with small letter, unless they are class/prototype.
+variable name can only be created with alphabets underscore _ and dollar sign $.
+variable cases;
+camel case	iAmCamelCase=true;
+Upper camel case	IAmCamelCase=true;	Convention for classes.
+snake case	this_is_snake_case=true;
+-------
+eslint.org	Find and fix problems in your JavaScript code, It gives feedback on your code.
+prettier.io	An opinionated code formatter
+---------
+console.log is for debugging therefore not suitable to ship to the client.
+variable created inside the function scope not available outside unless its return.
+
+
+
