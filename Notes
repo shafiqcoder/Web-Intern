@@ -77,5 +77,9 @@ fat arrow =>
 dont need explicit return 
 one liners.
 if you have two parameters in arrow function you must have parenthesis. e.g. const add=(a,b=3)=>a+b; but in single parameter no need. e.g. const inchToCm=inches=>inches*2.54;
+-----
+curly brackets {} in js can be block of code or creation of object.
+
+
 
 
