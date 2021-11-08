@@ -55,7 +55,27 @@ prettier.io	An opinionated code formatter
 console.log is for debugging therefore not suitable to ship to the client.
 variable created inside the function scope not available outside unless its return.
 function parameters function hello(first,second), when calling function its argument hello(Shafiq,coder).
-
-
+JS functions are values it self. they can be stored in a variable.
+a function without name is anonymous fn.
+function expression-store a function in a variable.
+---------
+JavaScript Hoisting:
+Hoisting is JavaScript's default behavior of moving declarations to the top.
+Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+JavaScript Declarations are Hoisted.(e.g. var y, var x, var hello,)
+In JavaScript, a variable can be declared after it has been used.
+In other words; a variable can be used before it has been declared.
+Variables defined with var are hoisted to the top and can be initialized at any time.
+Variables defined with let are also hoisted to the top of the block, but not initialized.
+Meaning: Using a let variable before it is declared will result in a ReferenceError.
+All functions are hoisted in JS except function defined with function expression.
+-----
+Arrow functions
+arrow functions are anonymous functions and concise.
+skinny arrow ->
+fat arrow => 
+dont need explicit return 
+one liners.
+if you have two parameters in arrow function you must have parenthesis. e.g. const add=(a,b=3)=>a+b; but in single parameter no need. e.g. const inchToCm=inches=>inches*2.54;
 
 
