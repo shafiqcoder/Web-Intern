@@ -79,6 +79,13 @@ one liners.
 if you have two parameters in arrow function you must have parenthesis. e.g. const add=(a,b=3)=>a+b; but in single parameter no need. e.g. const inchToCm=inches=>inches*2.54;
 -----
 curly brackets {} in js can be block of code or creation of object.
+closure in action that is inner function can have access to the outer function variables/parameters as well as all the global variables.
+-----
+https://picsum.photos/200, The Lorem Ipsum for photos.
+-----
+Window: load event
+The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
+
 
 
 

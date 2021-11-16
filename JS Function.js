@@ -34,4 +34,3 @@ const makeABaby=(first,last)=>({name:`${first}${last}`,age:0}) //round brackets 
 (function(age){
     return `I am cool and my age is ${age}`
 })(27); // auto runs
-
