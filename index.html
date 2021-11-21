@@ -7,13 +7,22 @@
     <title>Document</title>
   </head>
   <body>
-    <div>
-      <p>I am Paragraph!</p>
-      <div class="item"></div>
-      <div>
-        <img src="https://picsum.photos/200" />
-      </div>
-    </div>
-    <script src="./creating-with-strings.js"></script>
+    <button class="button">Click me</button>
+    <script src="./events.js"></script>
+
+    <style>
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+      }
+      .playerCard {
+        background: rgb(133, 133, 184);
+      }
+      .playerCard h2 {
+        color: black;
+      }
+    </style>
   </body>
 </html>
