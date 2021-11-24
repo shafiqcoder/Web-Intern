@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="base.css" />
+  </head>
+  <body>
+    <div class="canvasWrap">
+      <canvas width="800" height="600" id="etch-a-sketch"></canvas>
+      <div class="buttons"><button class="shake">Shake!</button></div>
+    </div>
+    <script src="./etch-a-sketch.js"></script>
+    <style>
+      body {
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background: rgb(129, 66, 66);
+        background-size: cover;
+      }
+      canvas {
+        border: 30px solid #e80000;
+        border-radius: 10px;
+        width: 800px;
+        height: 500px;
+        background: rgb(255, 255, 255);
+      }
+      canvas.shake {
+        animation: shake 0.5s linear 1;
+      }
+      @keyframes shake {
+        10%,
+        90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+        20%,
+        80% {
+          transform: translate3d(2px, 0, 0);
+        }
+        30%,
+        50%,
+        70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+        40%,
+        60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+    </style>
+  </body>
+</html>

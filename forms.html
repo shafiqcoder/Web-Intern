@@ -5,21 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Forms</title>
+    <link rel="stylesheet" href="./base.css" />
   </head>
   <body>
     <div class="wrapper">
-      <form>
+      <form name="signup">
+        <a class="sc" href="http://about.me/shafiqcoder"
+          ><strong>Shafiq Coder</strong>
+        </a>
+        <hr />
         <label for="name">Name</label>
         <input type="text" id="name" name="name" />
         <label for="email">Email</label>
         <input type="email" id="email" name="email" />
-        <input type="checkbox" id="agree" name="agree" />
+        <input required type="checkbox" id="agree" name="agree" />
         <label>I agree to the Terms and Conditions</label>
         <hr />
-        <!-- The <hr> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page. -->
+
         <button type="submit">submit</button>
       </form>
     </div>
+    <!-- Accesibility Gotchas and Keyboard Codes -->
+    <!-- For accessibility in case user dont have mouse -->
+    <div role="button" tabindex="0">I am button </button></div>
+    <img class="photo" tabindex="0" src="https://picsum.photos/200" alt="Nice">
     <script src="./forms.js"></script>
   </body>
 </html>

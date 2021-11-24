@@ -85,7 +85,18 @@ https://picsum.photos/200, The Lorem Ipsum for photos.
 -----
 Window: load event
 The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets and images. This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading.
-
+--
+<!-- The <hr> element is most often displayed as a horizontal rule that is used to separate content (or define a change) in an HTML page. -->
+--
+Want to preserve log messages? go to settings in console and turn on preserve log option.
+--
+const sc = document.querySelector(".sc");// select class sc by .sc
+--
+buttons are to be used to take action inside page.
+links are to be used to change page.
+--
+threejs.org
+--
 
 
 
