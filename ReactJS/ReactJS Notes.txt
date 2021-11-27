@@ -1,0 +1,114 @@
+ReactJS used to create single page applications.
+It is most useful due to components based programming. Its based on "Write once use everywhere" principle.
+--
+Install nodejs,npm,React Developer Tools(chrome extension),Thunder Client(VS code ext. alt to postman (to check API response)),VS code ES7 React/Redux/GraphQL/React-Native snippets(shortcut to commands),Bracket Pair Colorizer,Auto Rename Tag,Prettier - Code formatter,
+--
+sudo npm -g install create-react-app my-app (replace my-app with . to install in the same directory)(my-app ,app name should be url friendly with no capitals)
+(create-react-app complete will be downloaded, )(if failed to create "npm cache clean --force")
+to create new app"create-react-app textutils"
+npx install create-react-app my-app (direct installation of react app)
+npm start - to open app
+npm run build - for production build
+--
+JSx fragment <> </> , usually react app.js returns single tag in a function
+--
+emmet extension- in setting add language key value(javascript: javascriptreact)
+--
+node modules folder can be re-created by npm install or npm i
+--
+using bootstrap in react app.
+add closing tag. e.g. /
+replace class with className,for with htmlFor, tabindex with tabIndex, 
+--
+DO NOT add credential information/files in Public folder of react app.
+--
+For Production Build - npm run build
+--
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -97,7 +97,12 @@ links are to be used to change page.
 --
 threejs.org
 --
-
+'this' is undefined inside normal function, but it is window object in global scope and inside an arrow function.
+--
+call back function - it is a function which runs after completion of an action. 
+--
+JS code runs without blocking main thread. it is done by call backs
+--
 
 
 

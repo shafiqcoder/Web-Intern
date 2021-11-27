@@ -2,7 +2,7 @@
 const canvas = document.querySelector("#etch-a-sketch"); //id
 const ctx = canvas.getContext("2d");
 const shakebutton = document.querySelector(".shake");
-const MOVE_AMOUNT = 50; //true constant
+const MOVE_AMOUNT = 10; //true constant
 //setup canvas for drawing
 const { width, height } = canvas;
 let x = Math.floor(Math.random() * width);
@@ -50,7 +50,7 @@ function draw({ key }) {
 function handleKey(e) {
   if (e.key.includes("Arrow")) {
     e.preventDefault();
-    console.log(e.key);
+
     draw({ key: e.key });
   }
 }
