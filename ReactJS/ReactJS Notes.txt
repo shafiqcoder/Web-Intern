@@ -24,7 +24,8 @@ DO NOT add credential information/files in Public folder of react app.
 --
 For Production Build - npm run build
 --
- 
+default export can be imported with any name e.g. import apple from './module.js', but export variables with their same name in brackets {}
+--
 
 
 
