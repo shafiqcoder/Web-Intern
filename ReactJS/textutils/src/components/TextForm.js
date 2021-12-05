@@ -9,17 +9,55 @@ export default function TextForm(props) {
   // I cannot update the text value like this text="new text"
   // correct way to update the state is setText("new Text")
   const handleUpClick = () => {
-    let newtext = text.toUpperCase();
-    setText(newtext);
+    if (text.length === 0) {
+      props.showAlert("Please Enter Text", "warning");
+    } else {
+      let newtext = text.toUpperCase();
+      setText(newtext);
+      props.showAlert("Converted to UpperCase!", "success");
+    }
   };
   const handleloClick = () => {
-    let newtext = text.toLocaleLowerCase();
-    setText(newtext);
+    if (text.length === 0) {
+      props.showAlert("Please Enter Text", "warning");
+    } else {
+      let newtext = text.toLocaleLowerCase();
+      setText(newtext);
+      props.showAlert("Converted to Lower Case!", "success");
+    }
   };
   const handleonchange = (event) => {
     setText(event.target.value);
     //it is always used to handle events
   };
+  const handleClearText = () => {
+    setText("");
+    props.showAlert("Text Cleared!", "success");
+  };
+
+  const handlecopy = () => {
+    var text = document.getElementById("mybox");
+    console.log(typeof text.value);
+    if (text.value === "") {
+      props.showAlert("Please Enter Text", "warning");
+    } else {
+      text.select();
+      text.setSelectionRange(0, 9999);
+      navigator.clipboard.writeText(text.value);
+      props.showAlert("Text copied to clipboard successfully", "success");
+    }
+  };
+  const handleExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
+    console.log(newText.length);
+    if (newText.length === 1) {
+      props.showAlert("There is no space", "warning");
+    } else {
+      setText(newText.join(" "));
+      props.showAlert("Extra spaces removed!", "success");
+    }
+  };
+
   return (
     <>
       {/* Convert into jsx fragment bcz only one can be returned */}
@@ -40,6 +78,15 @@ export default function TextForm(props) {
         <button className="btn btn-primary mx-3" onClick={handleloClick}>
           Convert to lowerCase
         </button>
+        <button className="btn btn-primary mx-3" onClick={handleClearText}>
+          Clear Text
+        </button>
+        <button className="btn btn-primary mx-3" onClick={handlecopy}>
+          Copy Text
+        </button>
+        <button className="btn btn-primary mx-3" onClick={handleExtraSpaces}>
+          Remove Extra Spaces
+        </button>
       </div>
       <div className="container my-3">
         {/* my-3 put the margin of 3 in y */}
@@ -49,7 +96,7 @@ export default function TextForm(props) {
         </p>
         <p>{0.008 * text.split(" ").length} minutes read</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length > 0 ? text : "Nothing to preview!"}</p>
       </div>
     </>
   );
