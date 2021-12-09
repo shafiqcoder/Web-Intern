@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shafiqcoder/Web-Intern/issues"
   },
-  "homepage": "https://github.com/shafiqcoder/Web-Intern#readme"
+  "homepage": "https://github.com/shafiqcoder/Web-Intern#readme",
+  "dependencies": {
+    "uninstall-all-modules": "^1.0.5"
+  }
 }

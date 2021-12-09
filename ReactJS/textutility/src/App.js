@@ -4,8 +4,6 @@ import Navbar from "./components/Navbar.js";
 import TextForm from "./components/TextForm.js";
 import Alert from "./components/Alert";
 import About from "./components/About";
-import Footer from "./components/Footer";
-// import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   const [mode, setmode] = useState("light");
@@ -57,7 +55,6 @@ function App() {
             <Route exact path="/about" element={<About />} />
           </Routes>
         </div>
-        <Footer />
       </Router>
     </>
   );

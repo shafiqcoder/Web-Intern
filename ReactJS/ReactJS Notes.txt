@@ -26,10 +26,8 @@ For Production Build - npm run build
 --
 default export can be imported with any name e.g. import apple from './module.js', but export variables with their same name in brackets {}
 --
-
-
-
-
+state mean the whole thing UI,logic, variables , everything.
+--
 
 
 
