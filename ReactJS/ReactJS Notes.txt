@@ -28,6 +28,28 @@ default export can be imported with any name e.g. import apple from './module.js
 --
 state mean the whole thing UI,logic, variables , everything.
 --
+React Hooks Theory
+
+What are React Hooks?
+
+1.Features of class based components in function based components.
+2.It allows you to use state and other React features without writing a class.
+3.Hooks are the functions which "Hook Into" React state and lifecycle features from function components.
+Commonly used React Hooks
+	useState
+	
+	The setState function is used to update the state. It accepts a new state value and 		enqueues a re-render of the component.
+	
+	useEffect
+	The function passed to useEffect will run after the render is committed to the screen. 		Think of effects as an escape hatch from React’s purely functional world into the 		imperative world.
+
+	By default, effects run after every completed render, but you can choose to fire them 		only when certain values have changed.
+
+
+	useContext
+	Accepts a context object (the value returned from React.createContext) and returns the 		current context value for that context. The current context value is determined by the 		value prop of the nearest <MyContext.Provider> above the calling component in the tree.
+	
+	useRef
 
 
 
