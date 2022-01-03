@@ -103,6 +103,46 @@ call back function - it is a function which runs after completion of an action.
 --
 JS code runs without blocking main thread. it is done by call backs
 --
+Everything in JS happens inside an execution context.(think like a box or container)
+It has two parts
+Memory component/Variable Environment-> Everything is stored in key value pair.
+Code Component/Thread of execution -> In which code is executed one line at a time.
+--
+JS is a synchronous single threaded language.
+	single threaded means JS execute one line/ one command at time.
+	synchronous means js code runs in a specific order.it goes to the next line once the 		execution of current line finished.
+--
+Execution context is created in two phases
+	1.	Creation Phases/Memory Creation Phase:
+		In this phase JS allocates the memory to all the variable and functions.
+		e.g. 	var x=1
+			here JS first stores the special value called undefined to variable x.
+			in case of function ,it stores whole code.
+	2.	Code Execution Phase:
+		In this phase now the value 1 is assigned to x.
+--
+functions are the Heart of JS.They behave very differently in JS then any other langauge.
+functions are like mini program, when ever a functon in invoked , all together new execution context is created. Now again it has two components.
+--
+"" it is falsy
+" " it is truthy
+"0" it is truthy
+--
+empty array is truthy but [].length is falsy because its length is zero.
+--
+{} is truthy but Object.keys({}).length is falsy
+--
+Type Coercion refers to the process of automatic or implicit conversion of values from one data type to another. This includes conversion from Number to String, String to Number, Boolean to Number etc. when different types of operators are applied to the values.
+In case the behavior of the implicit conversion is not sure, the constructors of a data type can be used to convert any value to that datatype, like the Number(), String() or Boolean() constructor.
+--
+const for objects means you cannot create new object with same name but you can change its properties.
+--
+emmutable - not changeable value
+--
+delete object.property gives true or false.
+--
+
+
 
 
 

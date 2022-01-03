@@ -50,14 +50,34 @@ Commonly used React Hooks
 	Accepts a context object (the value returned from React.createContext) and returns the 		current context value for that context. The current context value is determined by the 		value prop of the nearest <MyContext.Provider> above the calling component in the tree.
 	
 	useRef
+	
 
 
+--------------------------------
+What is React Node?
+
+React nodes are basically equivalent to DOM nodes. To simplify, we can just talk about them as generic 'nodes.'
+
+A node is the basic building block of a web page. All HTML elements (div, a, p) are nodes, as well as document, text, attributes...
+
+You can create these nodes as separate entities, and then organize them into a tree (the DOM) in a parent-child hierarchy. document is the root, and then any nodes you add as children will be added to the page. W3Schools has a basic diagram here: https://www.w3schools.com/js/js_htmldom_navigation.asp
+
+Part of what makes React fast is that is builds a virtual DOM, and then compares the actual DOM with the virtual DOM to replace only the nodes which have changed since the previous render. But conceptually, React nodes and DOM nodes are equivalent.
+
+See this answer as well: What is a node in Javascript?
+
+And the MDN docs for node:https://developer.mozilla.org/en-US/docs/Web/API/Node
 
 
+According to the W3C HTML DOM standard, everything in an HTML document is a node:
 
+The entire document is a document node
+Every HTML element is an element node
+The text inside HTML elements are text nodes
+Every HTML attribute is an attribute node (deprecated)
+All comments are comment nodes
 
-
-
+-----
 
 
 
