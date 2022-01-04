@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../base.css" />
+  </head>
+  <!-- 
+    A JavaScript object literal is enclosed with curly braces {}. Values are mapped to keys in the object with a colon (:), and the key-value pairs are separated by commas. All the keys are unique, but values are not.
+
+Key-value pairs of an object are also referred to as properties.
+    Properties are the values associated with a JavaScript object.
+
+A JavaScript object is a collection of unordered properties.
+
+Properties can usually be changed, added, and deleted, but some are read only.
+
+All properties have a name. In addition they also have a value.
+
+The value is one of the property's attributes.
+
+Other attributes are: enumerable, configurable, and writable.
+
+These attributes define how the property can be accessed (is it readable?, is it writable?)
+
+In JavaScript, all attributes can be read, but only the value attribute can be changed (and only if the property is writable).
+
+( ECMAScript 5 has methods for both getting and setting all property attributes)
+
+const for objects means you cannot create new object with same name but you can change its properties.
+--
+emmutable - not changeable value
+--
+delete object.property gives true or false.
+--
+for deep copy of objects we can use lodash library
+--
+if two objects have same properties, the property which comes first will be overwriten by second property.
+--
+If you pass an object into a function and you modify that object ,the external object will also be updated . It is not the case for booleans, numbers and strings.
+   -->
+
+  <body>
+    <input type="text" name="first" value="wes" />
+
+    <script src="https://unpkg.com/lodash"></script>
+    <!-- lodash library for objects methods especially deep copy -->
+    <script>
+      const age = 100;
+      const wes = {
+        age,
+        name: "wes",
+        properyToCheck: "NEVER",
+        "cool-dude": true,
+        "really cool": false,
+        777: true,
+        dog: "snicker",
+        clothing: {
+          shirts: 10,
+          pants: 2,
+        },
+        sayHello: function (greeting = "Hey") {
+          return `${greeting} ${this.name}`;
+        },
+      };
+
+      wes.job = "Web Developer";
+      wes.age = 50;
+
+      console.log(wes.age);
+      // const properyToCheck = prompt('What do you want to check?');
+      // console.log(properyToCheck);
+      // console.log(wes[properyToCheck]);
+
+      const nameInput = document.querySelector('[name="first"]');
+      const name = nameInput ? nameInput.value : "";
+      console.log(name);
+
+      // console.log(delete wes.job);
+      // wes.age = undefined;
+      // wes.age = null;
+
+      let name1 = "wes";
+      let name2 = "wes";
+
+      console.log(name1 === name2);
+      name1 = "scott";
+      console.log(name1 === name2);
+      // update name1 to be what is name2
+      name1 = name2;
+      console.log(name1 === name2);
+      name2 = name1;
+      name2 = "westopher";
+
+      const person1 = {
+        first: "wes",
+        last: "bos",
+        clothing: {
+          shirts: 10,
+          pants: 2,
+        },
+      };
+      const person2 = {
+        first: "wes",
+        last: "bos",
+      };
+
+      // const person3 = person1;
+      // person3.first = 'Larry';
+      // console.log(person3.first);
+      // console.log(person1.first);
+      // const person3 = { ...person1 };
+      const person3 = _.cloneDeep(person1);
+      person3.first = "Larry";
+
+      person3.clothing.shirts = 100;
+
+      const meatInventory = {
+        bacon: 2,
+        sausage: 3,
+        oyster: 10,
+      };
+
+      const veggieInventory = {
+        lettuce: 5,
+        tomatoes: 3,
+        oyster: 15,
+      };
+
+      const inventory = {
+        ...meatInventory,
+        ...veggieInventory,
+      };
+
+      function doStuff(data) {
+        data = "something else";
+        console.log(data);
+      }
+
+      function doStuff2(data) {
+        data.tomatoes = 10000000000;
+        console.log(data);
+      }
+
+      doStuff2(inventory);
+    </script>
+  </body>
+</html>

@@ -141,6 +141,18 @@ emmutable - not changeable value
 --
 delete object.property gives true or false.
 --
+for deep copy of objects we can use lodash library
+--
+if two objects have same properties, the property which comes first will be overwriten by second property.
+--
+If you pass an object into a function and you modify that object ,the external object will also be updated . It is not the case for booleans, numbers and strings.
+--
+ what does immutable mean? #
+If an item is mutable, modifying the copy also modifies the original. If it’s immutable, modifying the copy does not affect the original.
+
+It’s confusing because immutable sounds like the item can’t be changed. What it actually means, though, is that the original is not changed when the copy is.
+--
+
 
 
 
