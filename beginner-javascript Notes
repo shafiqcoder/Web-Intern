@@ -62,6 +62,8 @@ undefined - created but not assigned value.
 couldnt use const for variable declaration when no value is assigned yet.
 null means nothing , defined value of nothing.
 === checks for value and type.
+Want to run something after some time----use time out
+want to run every 5 sec interval etc ---- use interval
 
 
 
