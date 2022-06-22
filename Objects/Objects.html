@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const age = 28;
+      const person = {
+        age, //If property name and property both have same name , we can only write property name
+        name: "shafiq",
+        "cool-dude": true,
+        "really cool": true,
+        1993: true,
+        dog: false,
+        Bike: "Honda",
+        // We can add nested properties
+        clothing: {
+          shirts: 10,
+          pants: 5,
+        },
+        sayHello: function (greeting = "Hello!") {
+          return `${greeting} ${this.name}`;
+        },
+        sneeze: function () {
+          console.log("AAHHH CHHOOOO", this);
+        }, // Here this has scope of Related object;person, in which it is called
+        sneeze_arrow: () => {
+          console.log("AAHHH CHHOOOO", this);
+        }, // Now this do not has the scope the thing called against but its Parent scope will inherent e.g Window
+      };
+
+      person.age = 29; // Since person is const variable but still We can change the properties bcz values of objects can be changes but New Objects cannot be decalred with same name
+      person.job = "Web Developer";
+      console.log(person);
+      //How to freeze an Object? so that its value cannot be changed??
+      const personFreeze = Object.freeze(person);
+      // New Object,personFreeze and Old Object both are freezed.
+      personFreeze.age = 30;
+      console.log(personFreeze);
+      //Accessing properties with square brackets notations.This notation is used when property to check is stored in a variable also it is used when property name has space like "really cool"
+      console.log(person.age);
+      console.log(person["age"]); //both have same output
+      console.log(person["really cool"]);
+      //Delete a property
+      delete person.age; // Returns boolean
+      // methods
+      // methods are functions that live inside of an object
+    </script>
+  </body>
+</html>

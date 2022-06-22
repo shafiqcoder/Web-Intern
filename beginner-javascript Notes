@@ -64,6 +64,17 @@ null means nothing , defined value of nothing.
 === checks for value and type.
 Want to run something after some time----use time out
 want to run every 5 sec interval etc ---- use interval
+-------
+Objects
+
+Everything in JS is an Objects.
+It allows us to group together Properties and Values /Keys and Values
+They have many uses 
+i.	Storing related data
+ii.	storing functionality
+iii.	custom type fuctionality
+Objects are used where order of properties does not matter.
+
 
 
 
