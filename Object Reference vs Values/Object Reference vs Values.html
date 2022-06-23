@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Reference vs Values</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/lodash@4.17.21/lodash.js"></script>
+    <script>
+      let name1 = "shafiq";
+      let name2 = "shafiq";
+      console.log(name1 === name2); //true
+      name2 = name1; //name2 is pointing to name1
+      name2 = "shafiqcoder";
+      console.log(name1); //shafiq
+      console.log(name2); //shafiqcoder
+      //Note by updating the value of name2 does not change the name1
+
+      //Now check for Objects
+      const person1 = {
+        first: "shafiq",
+        last: "ur Rehman",
+      };
+      const person2 = {
+        first: "shafiq",
+        last: "ur Rehman",
+      };
+      console.log("Person1 ===Person2 ", person1 === person2); // False
+      // They both have same properties but still its false..Its is because when we check objects it is done by reference to the objects not the actual content.UNLIKE strings it is different bcz strings have only values but objects have multiples properties.
+
+      // Now Objects are copy by reference.
+      const person3 = person1; // copy of person1 by reference to person3
+      person3.first = "Shafiqcoder"; //Updating the property of person3
+      console.log(person1.first); //shafiqcoder
+      //What happend here?? Why the propety of person1 also changed??
+      // This is because we have NOT created copy but Copy by reference.... This is the fundamental concept in JS.
+      //Note same happens to the ARRAYS.
+      //Now How to copy objects?
+      //One option is use spread operator.It is used to combine different objects in a single
+      const person4 = { ...person1 };
+      //now modify person1 ,this change will also appear in person4.
+      //modify person4 will also change person1...Now is that happens?? It is because spread operator creates shallow copy of an object.
+      //Now what to do for deep clone or deep copy?
+      //Solution is lodash library,to use this library goto unpkg.com and paste the url to above the script tag.
+      const person5 = _.cloneDeep(person1); //lodash library syntax
+
+      // Now copy by reference is also applicable to functions.
+      function doStuff(data) {
+        data = "something else";
+      }
+      //if you pass string to this function the string value assigned to a variable wil NOT change. bcz strings are immutable.
+      function doStuff(data) {
+        data.newproperty = "something else";
+      }
+      // If object/array is passed in above function , the external Objects/arrays will also modified... It is NOT the case for BOOLEAN, NUMBERS,STRINGS
+      // This is huge source of Bugs....keep in mind.
+    </script>
+  </body>
+</html>
