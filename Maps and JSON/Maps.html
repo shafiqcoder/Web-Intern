@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+  </head>
+  <body>
+    <ul class="prizes"></ul>
+    <!-- ul tag should be out of script tag -->
+    <script>
+      //Maps
+      //A Map holds key-value pairs where the keys can be any datatype.
+      // A Map remembers the original insertion order of the keys. but Objects Don't
+      // A Map has a property that represents the size of the map.
+      //Maps dont have literal, you need to create it with new keyword.
+      // We can create Map by passing an array of arrays e.g.new Map([['name','shafiq'],['age',28]])
+      // In objects we can add funtion to objects called methods but we cannot do that with Maps.
+      // JSON Does not handle Maps.
+      // How to convert Map into Objects so that we can we them into JSON?
+      Object.fromEntries(myMap);
+      // This method will try its best to convert BUT if we used objects as a key in Maps then it will probably not work better.
+      const person1 = {
+        name: "shafiqcoder",
+        age: 28,
+      };
+      const myMap = new Map();
+      myMap.set("name", "shafiq");
+      myMap.set(100, "This is a Number");
+      myMap.set(person1, "really cool"); //using object as a key
+      console.log(myMap);
+      // Map(3) {'name' => 'shafiq', 100 => 'This is a Number', {…} => 'really cool'}
+      // [[Entries]]
+      // 0: {"name" => "shafiq"}
+      // 1: {100 => "This is a Number"}
+      // key: 100
+      // value: "This is a Number"
+      // 2: {Object => "really cool"}
+      // size: 3
+      // [[Prototype]]: Map
+      const score = 200;
+      const prizes = new Map();
+      prizes.set(100, "Phone");
+      prizes.set(200, "LED");
+      prizes.set(300, "Laptop");
+      console.log(`You win a ${prizes.get(score)}`); //.get method takes key
+      console.log(myMap.size); //3; similar to length method,
+      //select that ul
+      const ul = document.querySelector(".prizes");
+      prizes.forEach((entry) => {
+        console.log(entry);
+      }); //this will return only values.
+      //To get keys and values both (Destructuring)
+      for (const prize of prizes) {
+        console.log(prize); //returns array
+        console.log(prize[0], prize[1]); //returns key value pair
+      }
+      for (const [key, value] of prizes) {
+        console.log(key, value); //returns same result but its better way to destructure an array
+        const li = `<li>${key}-${value}</li>`; //li -- list items
+        ul.insertAdjacentHTML("beforeend", li);
+        //The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position.
+      }
+      //How to delete an item from Map?
+      myMap.delete("name");
+    </script>
+  </body>
+</html>

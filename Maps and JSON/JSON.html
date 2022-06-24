@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <script>
+      // JSON format is used to send objects to other servers and websites . It is readable in all languages.
+      // JSON cannot handle Maps (until now June 2022)
+      const person = {
+        name: "shafiq",
+        age: 28,
+      };
+      //suppose we want to send this object, It will be converted to TEXT format because text format is easier to send.
+      JSON.stringify(person); // converted into TEXT format
+      // Now the other person will again convert into object
+      JSON.parse(person);
+      // How to convert Map into Objects so that we can we them into JSON?
+      Object.fromEntries(myMap);
+      // This method will try its best to convert BUT if we used objects as a key in Maps then it will probably not work better.
+    </script>
+  </body>
+</html>
